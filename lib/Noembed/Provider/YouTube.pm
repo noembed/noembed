@@ -45,7 +45,10 @@ sub serialize {
     $uri->query_param(autoplay => $autoplay);
   }
 
-  $data->{html} = $self->render($data, $uri->as_string);
+  my $html = $self->render($data, $uri->as_string);
+  $html =~s/\R//g;
+
+  $data->{html} = $html;
   return $data;
 }
 
