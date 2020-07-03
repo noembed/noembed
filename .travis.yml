@@ -1,8 +1,0 @@
-before_install:
-  - sudo apt-get build-dep libimager-perl
-  - sudo apt-get install python-pygments
-  - cpanm Module::Install
-language: perl
-perl:
-  - "5.14"
-  - "5.12"
