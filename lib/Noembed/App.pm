@@ -170,7 +170,7 @@ sub json_res{
     200,
     [
       @headers,
-      'Content-Type', 'text/javascript; charset=utf-8',
+      'Content-Type', 'application/json',
       'Content-Length', length $body
     ],
     [$body]
