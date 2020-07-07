@@ -4,7 +4,7 @@ use Web::Scraper;
 
 use parent 'Noembed::Provider';
 
-sub patterns { 
+sub patterns {
   'https://tube.switch.ch/videos/([a-z0-9]+)',
   'https://tube.switch.ch/cast/videos/(\b[0-9a-f]{8}\b-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{4}-\b[0-9a-f]{12}\b)'
 }
