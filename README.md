@@ -11,6 +11,10 @@
 
 `cpanm --installdeps .`
 
-## Run
+## Run as Perl PSGI service
 
 `plackup -Ilib bin/noembed.psgi`
+
+## Run with Docker
+
+ docker run -p5000:5000 noembed/noembed:1.0.alpha2
