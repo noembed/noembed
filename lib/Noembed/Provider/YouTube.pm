@@ -15,11 +15,12 @@ sub options { qw/maxwidth maxheight autoplay/}
 
 sub build_url {
   my ($self, $req) = @_;
-  my $uri = URI->new("http://www.youtube.com/oembed/");
+  my $uri = URI->new("https://www.youtube.com/oembed/");
 
   my $id = $req->captures->[0];
-  $uri->query_param("url", "http://www.youtube.com/watch?v=$id");
+  $uri->query_param("url", "https://www.youtube.com/watch?v=$id");
   $uri->query_param("scheme", "https");
+  $uri->query_param("format", "json");
 
   return $uri;
 }
